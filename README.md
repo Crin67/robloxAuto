@@ -18,6 +18,23 @@ copy config.example.json config.json
 python src/roblox_auto.py --title "Roblox" --config config.json
 ```
 
+### Optional overlay
+
+```bash
+python src/roblox_auto.py --title "Roblox" --config config.json --gui
+```
+
+The overlay keeps a small always-on-top window where you can edit the JSON config, save it, and start/stop the input loop.
+
+### Input modes
+
+```bash
+python src/roblox_auto.py --title "Roblox" --config config.json --input-mode sendinput
+python src/roblox_auto.py --title "Roblox" --config config.json --input-mode postmessage
+```
+
+Add `--activate` if you want the script to bring the Roblox window to the foreground before each input.
+
 ### Config format
 
 ```json
