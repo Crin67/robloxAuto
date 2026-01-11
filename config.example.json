@@ -1,0 +1,11 @@
+{
+  "key_cycle": [
+    {"key": "W", "delay_s": 0.4},
+    {"key": "D", "delay_s": 0.4},
+    {"key": "S", "delay_s": 0.4},
+    {"key": "A", "delay_s": 0.4}
+  ],
+  "click_cycle": [
+    {"x": 960, "y": 540, "delay_s": 1.5}
+  ]
+}
