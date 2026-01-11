@@ -4,7 +4,7 @@ Windows-only helper that sends key presses and mouse clicks to a Roblox window e
 
 ## Setup
 
-1. Copy the example config:
+1. Copy the example config (or create your own config file with the JSON format below):
 
 ```bash
 copy config.example.json config.json

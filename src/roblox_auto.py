@@ -146,8 +146,12 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_config(path: str) -> Tuple[Sequence[KeyStep], Sequence[ClickStep]]:
-    with open(path, "r", encoding="utf-8") as handle:
-        raw = json.load(handle)
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            raw = json.load(handle)
+    except FileNotFoundError as exc:
+        hint = f"Config file not found: {path}. Create it or copy config.example.json to {path}."
+        raise SystemExit(hint) from exc
     key_steps = load_key_cycle(raw.get("key_cycle", []))
     click_steps = load_click_cycle(raw.get("click_cycle", []))
     return key_steps, click_steps
